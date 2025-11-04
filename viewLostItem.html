@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lost Items • Lost & Found</title>
+    <title>Found Item • Lost & Found</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,14 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- Base styles and icons -->
+    <!-- Base styles and navbar look -->
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <!-- Page styles -->
     <link rel="stylesheet" href="css/lostItems.css" />
+    <!-- Page styles -->
+    <link rel="stylesheet" href="css/viewLostItem.css" />
   </head>
   <body>
     <header>
@@ -36,8 +37,8 @@
         </div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="lostItems.html">Lost Items</a></li>
-          <li><a href="foundItems.html">Found Items</a></li>
+          <li><a href="lostItems.html">Lost Items</a></li>
+          <li><a class="active" href="foundItems.html">Found Items</a></li>
           <li><a href="report.html">Report Item</a></li>
           <li><a href="messages.html">Messages</a></li>
         </ul>
@@ -64,65 +65,51 @@
       </nav>
     </header>
 
-    <main class="lost-hero">
-      <div class="lost-container">
-        <h1 class="page-title">Lost Items</h1>
+    <main class="detail-hero">
+      <div class="detail-container">
+        <section class="detail-card">
+          <a class="back-link" href="javascript:history.back()">
+            <i class="ri-arrow-left-line"></i> Back
+          </a>
 
-        <section class="filters-panel">
-          <div class="filter search">
-            <div class="pill">
-              <i class="ri-search-line"></i>
-              <input type="text" placeholder="Search lost items..." />
+          <h1 class="detail-title">Lost Item</h1>
+
+          <div class="detail-grid">
+            <div class="detail-media">
+              <img src="assets/sample/iphone16.jpg" alt="Lost item photo" />
             </div>
-          </div>
 
-          <div class="filter select">
-            <button class="pill" type="button">
-              <i class="ri-apps-2-line"></i>
-              <span>All Categories</span>
-              <i class="ri-arrow-down-s-line chev"></i>
-            </button>
-          </div>
-
-          <div class="filter select">
-            <button class="pill" type="button">
-              <i class="ri-map-pin-line"></i>
-              <span>All Locations</span>
-              <i class="ri-arrow-down-s-line chev"></i>
-            </button>
-          </div>
-        </section>
-
-        <p class="results-hint">Showing 1 of 1 lost item</p>
-
-        <section class="cards">
-          <article class="item-card">
-            <div class="media">
-              <img src="assets/sample/iphone16.jpg" alt="iPhone 6" />
-            </div>
-            <div class="content">
-              <div class="meta-row">
-                <span class="tag tag-lost">Lost</span>
-                <span class="tag tag-muted">Electronics</span>
+            <div class="detail-info">
+              <div class="meta triple">
+                <div class="meta-block">
+                  <div class="meta-label">Location</div>
+                  <div class="meta-value">Library</div>
+                </div>
+                <div class="meta-block">
+                  <div class="meta-label">Lost on</div>
+                  <div class="meta-value strong">10/01/2024</div>
+                </div>
+                <div class="meta-block">
+                  <div class="meta-label">Reported by</div>
+                  <div class="meta-value strong">JiaBoy</div>
+                </div>
               </div>
-              <h3 class="item-title">iPhone 6</h3>
-              <div class="details">
-                <div>Library</div>
-                <div>Lost on 10/1/2024</div>
-                <div>By Allyssa Palen</div>
+
+              <div class="description">
+                <div class="meta-label">Description</div>
+                <div class="desc-value">
+                  <span class="strong">New gray</span><br />
+                  <span class="strong">iPhone 6</span>
+                </div>
               </div>
-              <div class="actions">
-                <button
-                  class="view-btn"
-                  type="button"
-                  onclick="location.href='viewLostItem.html'"
-                >
-                  <i class="ri-eye-line"></i>
-                  View
+
+              <div class="cta-row">
+                <button type="button" class="message-btn">
+                  Message if Found
                 </button>
               </div>
             </div>
-          </article>
+          </div>
         </section>
       </div>
     </main>
