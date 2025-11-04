@@ -31,3 +31,7 @@ This project is a **fully responsive static website** built using **HTML, CSS, a
    ```bash
    git clone https://github.com/yourusername/yourproject.git
    ```
+
+2. Open the project folder in your code editor.
+3. Run the website locally by opening index.html in your browser.
+
