@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- Google fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/createAccount.css" />
   </head>
   <body>
     <!-- Header -->
@@ -24,7 +25,7 @@
       <nav class="navbar">
         <div class="logo">
           <img
-            src="assets/logo/Logologin.png"
+            src="assets/logo/brandlogo.png"
             width="100"
             alt="Lost and Found Logo"
           />
@@ -44,11 +45,7 @@
         </ul>
 
         <div class="action-buttons">
-          <button
-            type="button"
-            class="login-btn"
-            onclick="location.href='login.html'"
-          >
+          <button type="button" class="login-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -63,11 +60,7 @@
             Login
           </button>
 
-          <button
-            type="button"
-            class="register-btn"
-            onclick="location.href='createAccount.html'"
-          >
+          <button type="button" class="register-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -85,65 +78,76 @@
       </nav>
     </header>
 
-    <!-- Body -->
-    <main>
-      <section class="hero-section">
-        <div class="hero-container">
-          <div class="text-wrapper">
-            <h1>Lost Something? Found Something?</h1>
-            <p>Help your fellow students reunite with their belongings</p>
+    <!-- Create Account Body -->
+    <main class="auth-hero">
+      <a class="back-link" href="index.html">
+        <i class="ri-arrow-left-line"></i> Back
+      </a>
+
+      <div class="auth-content">
+        <h1 class="auth-title">Create Account</h1>
+        <p class="auth-subtitle">Join the Lost &amp; Found Community</p>
+
+        <section class="auth-card">
+          <div class="card-header">
+            <i class="ri-user-add-line"></i>
+            <span>Register</span>
           </div>
 
-          <div class="search-field">
-            <div class="search-box">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-              <input
-                type="text"
-                id="search"
-                name="search"
-                placeholder="Search for lost or found items..."
-              />
-            </div>
-          </div>
+          <form class="auth-form" action="#" method="post">
+            <label for="fullName">Full Name</label>
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              placeholder=""
+              required
+            />
 
-          <div class="button-group">
-            <button class="btn btn-lost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                fill="currentColor"
-              >
-                <path
-                  d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z"
-                ></path>
-              </svg>
-              Report Lost Items
-            </button>
+            <label for="studentId">Student ID</label>
+            <input
+              id="studentId"
+              name="studentId"
+              type="text"
+              placeholder=""
+              required
+            />
 
-            <button class="btn btn-found">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2v9z" />
-              </svg>
-              Report Found Items
-            </button>
-          </div>
-        </div>
-      </section>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder=""
+              required
+            />
+
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder=""
+              required
+            />
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              placeholder=""
+              required
+            />
+
+            <button class="submit-btn" type="submit">Create Account</button>
+          </form>
+
+          <p class="signin-cta">
+            Already have an account? <a href="login.html">Sign in here</a>
+          </p>
+        </section>
+      </div>
     </main>
 
     <script src="/app.js" type="module"></script>
