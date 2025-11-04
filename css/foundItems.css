@@ -126,9 +126,6 @@ body {
 .tag-muted {
   color: #7a7a7a;
 }
-.tag-found {
-  color: var(--green); /* make 'Found' green */
-}
 
 .item-title {
   margin: 4px 0 10px;
@@ -170,7 +167,7 @@ body {
   color: #fff;
 }
 
-/* Navbar replication */
+/* Navbar */
 header .navbar {
   display: flex;
   align-items: center;
@@ -255,5 +252,5 @@ header .navbar {
 }
 
 .logout-btn {
-  font-size: 20px; /* was 16px */
+  font-size: 20px;
 }

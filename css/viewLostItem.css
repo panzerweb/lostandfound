@@ -1,0 +1,138 @@
+:root {
+  --background: #21c727;
+  --card: #ffffff;
+  --muted: #5f6b7a;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --green: #16c75a;
+  --green-pressed: #12b350;
+}
+
+html,
+body {
+  font-family: "Inter", "Public Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+    sans-serif;
+}
+
+.detail-hero {
+  min-height: 100vh;
+  background: var(--background);
+  padding: 28px 16px 56px;
+}
+
+.detail-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.detail-card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detail-title {
+  text-align: center;
+  color: #b22222;
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 36px);
+  margin: 0 0 10px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.detail-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.meta.triple {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.meta-block {
+}
+.meta-label {
+  color: #8b8f95;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.meta-value {
+  color: #0e0e0e;
+  font-weight: 700;
+  font-size: 18px;
+}
+.meta-value.strong {
+  font-weight: 800;
+}
+
+.description .desc-value {
+  color: #0e0e0e;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+.message-btn {
+  background: var(--green);
+  color: #fff;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  font-size: 16px;
+}
+.message-btn:hover {
+  background: var(--green-pressed);
+}
+
+@media (max-width: 960px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .back-link {
+    position: static;
+    margin-bottom: 6px;
+  }
+}

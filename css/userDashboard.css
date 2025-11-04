@@ -1,0 +1,232 @@
+:root {
+  --background: #21c727;
+  --card: #ffffff;
+  --muted: #5f6b7a;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --green: #16c75a;
+  --green-pressed: #12b350;
+  --black: #0b0b0b;
+  --pending: #c6a623;
+}
+
+html,
+body {
+  font-family: "Inter", "Public Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+    sans-serif;
+}
+
+/* Navbar (same look as list pages) */
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+}
+.navbar .nav-links a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 24px;
+  color: #7f7f7f;
+}
+.navbar .nav-links a:hover {
+  color: #000;
+}
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-user .user-avatar {
+  width: 22px;
+  height: 22px;
+}
+.nav-user .user-name {
+  font-weight: 800;
+  color: var(--background);
+  font-size: 18px;
+} /* green username */
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: #7f7f7f;
+  color: #fff;
+  border: 0;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.logout-btn .logout-icon {
+  width: 20px;
+  height: 20px;
+}
+.logout-btn:hover {
+  background: #6b6b6b;
+}
+
+.dash-hero {
+  min-height: 100vh;
+  background: var(--background);
+  padding: 28px 16px 56px;
+}
+
+.dash-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.welcome {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 12px 0 18px;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 18px 18px 22px;
+}
+
+.panel-title {
+  text-align: center;
+  color: #0a0a0a;
+  font-weight: 800;
+  font-size: clamp(20px, 3vw, 26px);
+  margin: 0 0 12px;
+}
+
+/* Tabs */
+.tabs {
+  background: var(--black);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  gap: 8px;
+  margin: 0 auto 14px;
+}
+.tab {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px 8px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+.tab.active {
+  background: transparent;
+}
+.tab .sup {
+  font-size: 12px;
+  vertical-align: super;
+  margin-left: 4px;
+}
+
+/* Sections */
+.section {
+  padding: 10px 6px;
+}
+.section-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0b0b0b;
+  font-weight: 800;
+  font-size: 22px;
+  margin: 4px 0 10px;
+}
+.section-row i {
+  font-size: 22px;
+  color: #0b0b0b;
+}
+
+.claim-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.claim-center {
+  text-align: center;
+}
+.claim-title {
+  font-weight: 800;
+  font-size: 22px;
+  color: #0e0e0e;
+}
+.claim-meta {
+  color: #7c7c7c;
+  font-size: 14px;
+  margin-top: 2px;
+}
+.claim-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--pending);
+  font-weight: 800;
+}
+.claim-status i {
+  font-size: 18px;
+  color: var(--pending);
+}
+
+.sections-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.col-left {
+  display: grid;
+  gap: 18px;
+}
+.claims-section .claim-item {
+  margin-left: auto; /* push block to the right */
+  max-width: 420px; /* keep a tidy width */
+}
+.claims-section .claim-center {
+  text-align: right; /* right-align the text */
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .navbar .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .section-row {
+    font-size: 20px;
+  }
+  .claim-title {
+    font-size: 20px;
+  }
+  .sections-grid {
+    grid-template-columns: 1fr;
+  }
+  .claims-section .claim-item,
+  .claims-section .claim-center {
+    margin-left: 0;
+    text-align: left;
+  }
+}
