@@ -84,8 +84,7 @@ body {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
-.meta-block {
-}
+
 .meta-label {
   color: #8b8f95;
   font-weight: 700;
