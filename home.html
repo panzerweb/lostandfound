@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lost and Found</title>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,9 +52,10 @@
             class="user-avatar"
             width="20"
             height="20"
+            onclick="location.href='userDashboard.html'"
           />
           <span class="user-name">JiaBoy</span>
-          <button type="button" class="logout-btn">
+          <button type="button" class="logout-btn" onclick="location.href='createAccount.html'">
             <img
               src="assets/icon/doorIcon.jpg"
               alt=""
@@ -98,7 +99,7 @@
             </div>
           </div>
 
-          <div class="button-group">
+          <div class="button-group" onclick="location.href='reportLostItem.html'">
             <button class="btn btn-lost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +115,7 @@
               Report Lost Items
             </button>
 
-            <button class="btn btn-found">
+            <button class="btn btn-found" onclick="location.href='reportFoundItem.html'">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
